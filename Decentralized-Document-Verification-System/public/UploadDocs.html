@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Documents - InstaVerify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="UploadDocs.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" defer></script>
+  <script src="backgroundMetaLogo.js"></script>
+  <script src="UploadDocs.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <style>
+      body {
+          font-family: 'Poppins', sans-serif;
+          background-color: #f7f7f7;
+      }
+  </style>
+  <script src="changebg.js" defer></script>
+</head>
+<body class="flex flex-col items-center min-h-screen">
+
+  <!-- Header -->
+  <header class="w-full bg-white shadow-md py-4 px-6 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+          <img src="bulbon.png" id="theme-toggle" alt="Toggle dark/light mode" class="w-10 h-10 cursor-pointer">
+          <h1 class="text-2xl font-bold text-gray-900">InstaVerify</h1>
+      </div>
+      <nav class="flex gap-6">
+          <a href="Home.html" class="page">Back</a>
+          <div class="wallet-area">
+                <img src="metamask.jpg" alt="not connected" width="20" height="20">
+                <div id="wallet-status" class="hidden items-center gap-3 bg-white/10 p-2 rounded-lg">
+                    <span id="wallet-address" class="font-mono text-sm px-2 py-1 rounded-md bg-gray-700/50 dark:bg-black/20"></span>
+                </div>
+            </div>
+      </nav>
+  </header>
+
+  <!-- Main container -->
+  <main id="main-id" class="w-full max-w-4xl mt-10 bg-white rounded-xl shadow-lg p-8">
+      <header class="text-center mb-8">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Upload Students Details</h1>
+      </header>
+
+      <!-- File input / drop zone -->
+      <div id="drop-zone" class="border-2 border-dashed border-gray-300 rounded-lg p-10 text-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer flex flex-col items-center gap-4">
+          <input type="file" id="file-input" class="hidden" accept=".xlsx, .xls">
+          <svg class="h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <p class="text-sm text-gray-600"><span class="font-semibold text-indigo-600">Click to upload</span> or drag and drop</p>
+          <p class="text-xs text-gray-500">XLSX or XLS files only</p>
+          <p id="file-name" class="text-sm text-gray-700 font-medium mt-2"></p>
+      </div>
+      
+  </main>
+  <span id="hidden-id"></span>
+</body>
+</html>

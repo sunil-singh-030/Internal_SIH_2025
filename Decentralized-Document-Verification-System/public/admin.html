@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - InstaVerify</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" defer></script>
+    <script src="changebg.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="bulbon.png" id="theme-toggle" alt="Toggle dark/light mode" width="40" height="40">
+            <h1 id="projectname">InstaVerify</h1>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="Home.html" class="page">Home</a>
+            <a href="RegisterInstitute.html" class="page">Register</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <div id="admin-auth-layer">
+            <div id="auth-message" class="auth-box">Connecting to wallet...</div>
+        </div>
+
+        <div class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <p>Live statistics and management tools for the InstaVerify platform.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Registered Institutes</h3>
+                <p id="total-institutes" class="stat-number">...</p>
+                <div class="card-icon">🏫</div>
+            </div>
+            <div class="stat-card">
+                <h3>Documents on Chain</h3>
+                <p id="total-documents" class="stat-number">...</p>
+                <div class="card-icon">📄</div>
+            </div>
+            <div class="stat-card">
+                <h3>Students</h3>
+                <p id="total-students" class="stat-number">...</p>
+                <div class="card-icon">👨‍🎓</div>
+            </div>
+        </div>
+
+        <div class="request-section">
+            <h2>Institute Details</h2>
+            <div class="request-table-container">
+                <table class="request-table">
+                    <thead>
+                        <tr>
+                            <th>Institute Name</th>
+                            <th>Wallet Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requests-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Optional container for cards view -->
+        <!-- <div id="my-institutes-container"></div> -->
+
+    </main>
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>InstaVerify</h3>
+      <p>Securely verify and share your documents on the blockchain. Trusted, transparent, and hassle-free.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@instaverify.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <div class="footer-socials">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 InstaVerify. All rights reserved.</p>
+  </div>
+</footer>
+
+    <script src="admin.js" defer></script> 
+</body>
+</html>
