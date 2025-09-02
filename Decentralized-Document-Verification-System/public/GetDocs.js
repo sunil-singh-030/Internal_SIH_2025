@@ -1,7 +1,8 @@
 const stdname = document.getElementById("stdname");
 const rollNo = document.getElementById("rollno");
 
-
+const contractAddress = "";
+const contractABI = [];
 
 console.log(contractAddress);
 let email1;
