@@ -18,8 +18,8 @@ const otpStore = {};
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'sunilsinghj04@gmail.com',
-        pass: 'uvgp btzv axca zalr'
+        user: 'email',
+        pass: 'pswd'
     }
 });
 
@@ -34,7 +34,7 @@ app.post('/send-otp', async (req, res) => {
     otpStore[email] = { otp, expiresAt };
 
     const mailOptions = {
-        from: 'sunilsinghj04@gmail.com',
+        from: 'email',
         to: email,
         subject: 'Your OTP Code',
         text: `Your OTP is ${otp}. It will expire in 5 minutes.`
